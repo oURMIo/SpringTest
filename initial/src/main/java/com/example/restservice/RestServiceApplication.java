@@ -21,5 +21,6 @@ public class RestServiceApplication implements CommandLineRunner {
         System.out.println("using environment: " + myConfig.getEnvironment());
         System.out.println("name: " + myConfig.getName());
         System.out.println("enabled:" + myConfig.isEnabled());
+        System.out.println("servers: " + myConfig.getServers());
     }
 }
