@@ -1,10 +1,8 @@
 package com.example.restservice;
 
-
 import java.lang.String;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 import org.springframework.boot.context.properties.ConstructorBinding;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
@@ -13,10 +11,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Configuration
-@EnableConfigurationProperties
 @ConfigurationProperties
 @ConstructorBinding
-@ConfigurationPropertiesScan
+@EnableConfigurationProperties
 public class YAMLConfig {
 
     private String name;
@@ -62,9 +59,5 @@ public class YAMLConfig {
     public List<String> getServers() {
         return servers;
     }
-
-    // standard getters and setters
-
 }
-
 
