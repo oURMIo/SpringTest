@@ -1,32 +1,23 @@
 package com.example.restservice;
 
-import java.lang.String;
-
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.context.properties.ConstructorBinding;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.context.annotation.Configuration;
 
 import java.util.ArrayList;
 import java.util.List;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ConfigurationProperties
-@ConstructorBinding
 @EnableConfigurationProperties
+@ConfigurationProperties
+@ConfigurationPropertiesScan
 public class YAMLConfig {
 
     private String name;
     private String environment;
     private boolean enabled;
     private List<String> servers = new ArrayList<>();
-
-    public YAMLConfig(String name, String environment, boolean enabled, List<String> servers) {
-        this.name = name;
-        this.environment = environment;
-        this.enabled = enabled;
-        this.servers = servers;
-    }
 
     public void setName(String name) {
         this.name = name;
@@ -59,5 +50,8 @@ public class YAMLConfig {
     public List<String> getServers() {
         return servers;
     }
+
+    // standard getters and setters
+
 }
 
