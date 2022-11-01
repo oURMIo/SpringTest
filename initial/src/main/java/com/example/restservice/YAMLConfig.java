@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @EnableConfigurationProperties
-@ConfigurationProperties
+@ConfigurationProperties("dima")
 @ConfigurationPropertiesScan
 public class YAMLConfig {
 
